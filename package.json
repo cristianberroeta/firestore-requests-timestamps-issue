@@ -2,11 +2,19 @@
   "name": "firestore-requests-timestamps-issue",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "firebase --project demo-firestore-requests-timestamps-issue emulators:start"
+    "start": "npm run build-watch & firebase --project demo-firestore-requests-timestamps-issue emulators:start",
+    "build-watch": "webpack --watch"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^9.0.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.52.0",
+    "webpack-cli": "^4.8.0"
+  }
 }
